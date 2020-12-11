@@ -58,7 +58,7 @@ public class TdListController {
 
 	// delete
 	@DeleteMapping("/delete/{id}")
-	public ResponseEntity<TdListDto> delete(@PathVariable Long id, @RequestBody TdListDto tdListDto) {
+	public ResponseEntity<TdListDto> delete(@PathVariable Long id) {
 		return this.service.delete(id) ? new ResponseEntity<>(HttpStatus.NO_CONTENT)
 				// if successfully deleted returns nothing
 				: new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);

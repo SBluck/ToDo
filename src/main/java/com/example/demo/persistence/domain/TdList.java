@@ -19,4 +19,16 @@ public class TdList {
 	private Long id;
 	@NotNull
 	private String name;
+
+	public TdList(Long id, String name) {
+		super();
+		this.id = id;
+		this.name = name;
+	}
+
+	public TdList(String name) {
+		super();
+		this.name = name;
+	}
+
 }
