@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
 import lombok.Data;
@@ -20,8 +21,8 @@ public class TdTask {
 	@NotNull
 	private String todo;
 
-//	@ManyToOne
-//	private TdList tdList;
+	@ManyToOne
+	private TdList tdList;
 
 	public TdTask(Long id, String todo) {
 		super();

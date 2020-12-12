@@ -11,6 +11,7 @@ import com.example.demo.dto.TdTaskDto;
 import com.example.demo.exceptions.TdTaskNotFoundException;
 import com.example.demo.persistence.domain.TdTask;
 import com.example.demo.persistence.repo.TdTaskRepo;
+import com.example.demo.util.SpringBeanUtil;
 
 @Service
 public class TdTaskService {
@@ -46,6 +47,20 @@ public class TdTaskService {
 	// read one method - return DTO
 	public TdTaskDto readOne(Long id) {
 		return this.mapToDTO(this.repo.findById(id).orElseThrow(TdTaskNotFoundException::new));
+	}
+
+	// update method
+	public TdTaskDto update(TdTaskDto tdTaskDto, Long id) {
+		TdTask toUpdate = this.repo.findById(id).orElseThrow(TdTaskNotFoundException::new);
+		toUpdate.setTodo(tdTaskDto.getTodo());
+		SpringBeanUtil.mergeNotNull(tdTaskDto, toUpdate);
+		return this.mapToDTO(this.repo.save(toUpdate));
+	}
+
+	// delete method
+	public boolean delete(Long id) {
+		this.repo.deleteById(id); // true if deleted
+		return !this.repo.existsById(id); // true
 	}
 
 }
