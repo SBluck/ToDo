@@ -2,6 +2,7 @@ package com.example.demo.rest;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -25,6 +26,7 @@ public class TdListController {
 
 	private TdListService service;
 
+	@Autowired
 	public TdListController(TdListService service) {
 		super();
 		this.service = service;
