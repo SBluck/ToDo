@@ -26,7 +26,7 @@
           aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">UDoIt</a>
+        <a class="navbar-brand" href="#">u-Do-It</a>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
@@ -36,25 +36,61 @@
         </div>
     </nav>
     <br>
+    
     <div class="row">
       <div class="col-sm">
         <h6>your todo lists</h6>
       </div>
-      <div class="col-sm">
-        <a class="btn btn-secondary" href="tdList.html" role="button">+ List</a>
+      <div class="col-md">
+        <form method="post" class="newList" role="form">
+          <div class="form-group">
+            <label class="sr-only" for="formInputName">Name:</label>
+            <input type="text" class="form-control" id="name">
+          </div>
+          <button type="submit" class="btn btn-secondary mb-2">+ List</button>
+        </form>
+        <br>
       </div>
-    </div>
+    </div> 
+
     <div id="tdListDiv"></div>
     <br>
+    
     <div class="row">
       <div class="col-sm">
         <h6>your todos</h6>
       </div>
-      <div class="col-sm">
-        <a class="btn btn-secondary" href="tdToDo.html" role="button">+ Todo</a>
+      <div class="col-md">
+        <form method="post" class="newTodo" >
+          <div class="form-group">
+            <label class="sr-only" for="formInputTodo">Todo:</label>
+            <input type="text" class="form-control" id="todo">
+          </div>
+          <div class="form-group">
+            <label class="sr-only" for="formInputtodoListId">Todo List Id:</label>
+            <!-- <select class="form-control" id="todoList" name='todoList' onClick="getTodoListName()"> -->
+            <input type="text" size="3" class="form-control" id="todoList">  
+            <!-- </select> -->
+          </div>
+          <button type="submit" class="btn btn-secondary mb-2">+ Todo</button>
+        </form>
+        <br>
       </div>
     </div>
+    
     <div id="tdTaskDiv"></div>
+    
+<!--     <div class="modal hide" id="editTask">
+      <div class="modal-body">
+        <input type = "hidden" name="taskId" id="taskId" value= " "/>
+      </div>
+    </div>
+
+    <div class="modal hide" id="myModalList">
+      <div class="modal-body">
+        <input type = "hidden" name="listId" id="listId" value= " "/>
+      </div>
+    </div> -->
   </div>
   <script src="main.js"></script>
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
