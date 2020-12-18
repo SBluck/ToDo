@@ -22,8 +22,8 @@ import com.example.demo.persistence.domain.TdTask;
 import com.example.demo.service.TdTaskService;
 
 @SpringBootTest
-@ActiveProfiles("dev")
-public class TdTaskControllerUnitTest {
+@ActiveProfiles("test")
+class TdTaskControllerUnitTest {
 
 	@Autowired
 	private TdTaskController controller;

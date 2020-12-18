@@ -1,6 +1,6 @@
-drop table if exists `tdTask` CASCADE ;
-drop table if exists `tdList` CASCADE ;
+DROP TABLE IF EXISTS `tdTask` CASCADE ;
+DROP TABLE IF EXISTS `tdList` CASCADE ;
 
-create table if not exists tdList (id bigint PRIMARY KEY AUTO_INCREMENT, `name` varchar(25) not null);
-create table if not exists tdTask (id bigint PRIMARY KEY AUTO_INCREMENT, todo varchar(40) not null);
+CREATE TABLE IF NOT EXISTS `tdList` (`id` BIGINT PRIMARY KEY AUTO_INCREMENT, `name` VARCHAR(25) NOT NULL);
+CREATE TABLE IF NOT EXISTS `tdTask` (`id` BIGINT PRIMARY KEY AUTO_INCREMENT, `todo` VARCHAR(40) NOT NULL);
 
