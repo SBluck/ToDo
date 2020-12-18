@@ -28,7 +28,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 @Sql(scripts = { "classpath:tdl-schema.sql",
 		"classpath:tdl-data.sql" }, executionPhase = ExecutionPhase.BEFORE_TEST_METHOD)
 @ActiveProfiles(profiles = "test")
-class TdTaskControllerIntegrationTest {
+class TdTaskControllerIntegrnTest {
 
 	@Autowired
 	private MockMvc mvc;
