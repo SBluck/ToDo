@@ -23,7 +23,7 @@ import com.example.demo.service.TdListService;
 
 @SpringBootTest // identify as test file to Spring
 @ActiveProfiles("dev") // sets application properties file to be used
-public class TdListControllerUnitTest {
+class TdListControllerUnitTest {
 
 	@Autowired
 	private TdListController controller;
